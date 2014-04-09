@@ -18,6 +18,11 @@ class Log
 
    public static var printMutex:Mutex;
 
+   public static inline var RED = "\x1b[31m";
+   public static inline var NORMAL = "\x1b[0m";
+   public static inline var BOLD = "\x1b[1m";
+   public static inline var ITALIC = "\x1b[3m";
+
    public static function initMultiThreaded()
    {
      if (printMutex!=null)
@@ -69,6 +74,19 @@ class Log
             printMutex.release();
       }
    }
+
+   public static function lock():Void
+   {
+      if (printMutex!=null)
+        printMutex.acquire();
+   }
+
+   public static function unlock():Void
+   {
+      if (printMutex!=null)
+        printMutex.release();
+   }
+
 
    public static function print(message:String):Void
    {
