@@ -267,7 +267,7 @@ public:
       return * (ELEM_ *)(mBase + inIndex*sizeof(ELEM_)) = inValue;
    }
 
-   inline int memcmp(Array<ELEM_> inOther)
+   int memcmp(Array<ELEM_> inOther)
    {
       return ArrayBase::Memcmp(inOther.GetPtr());
    }
