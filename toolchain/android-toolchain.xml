@@ -131,7 +131,7 @@
 
   <exe name="${EXEPREFIX}-g++" />
 
-  <ext value="${ARCH}.so"/>
+  <ext value=".so"/>
   <outflag value="-o"/>
   <prefix value="lib"/>
 
