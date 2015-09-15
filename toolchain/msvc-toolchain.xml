@@ -39,6 +39,9 @@
   <!-- -O2 is back ! -->
   <flag value="-O2" unless="debug"/>
 
+  <!-- https://msdn.microsoft.com/en-us/library/dn502518.aspx -->
+  <flag value="-FS" if="debug"/>
+
   <!-- Newer options -->
   <!-- <flag value = "/analyze-" if="MSVC17+" /> -->
   <flag value = "/WX-" if="MSVC17+" />
